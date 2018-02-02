@@ -1,4 +1,4 @@
-MASTER_KEY = 'myMasterKey'
-APPLICATION_ID = 'myAppId'
-REST_API_KEY = 'myRestKey'
-PARSE_API_URL = 'https://parse.com/1'
+MASTER_KEY = '17u6LGo7TKHu1O9c54qrEofmFXTYhcs6CPVPpVgS'
+APPLICATION_ID = 'S0REdqhbCL5IiQFPV05YIYW5UTPYSLXCWTVpmTcP'
+REST_API_KEY = 'WF4wi2AyyvOBELgrY40uO25hVNCYV3PTPCSHHXcp'
+PARSE_API_URL = 'https://pg-app-3pp104a0amwpsltztbhvwz1g7yx3jq.scalabl.cloud/1/'

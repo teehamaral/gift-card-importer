@@ -14,9 +14,9 @@ register(APPLICATION_ID, REST_API_KEY, master=MASTER_KEY)
 params = sys.argv
 
 
-def add_item_to_parse(challenge_code, url):
+def add_item_to_parse(project_name, keyword, org_name, project_type, category):
     collection = Object.factory(params[1])
-    new_item = collection(ChallengeCode=challenge_code, URL=url, PhoneNumber=None, active=True)
+    new_item = collection(projectName=project_name, keyword=keyword, orgName=org_name, projType=project_type, category=category)
     return new_item.save()
 
 
@@ -34,10 +34,11 @@ if __name__ == '__main__':
     if sheet:
         for i, item in enumerate(sheet):
             if i != 0:
-                rows.append(dict(challenge_code=item[4], url=item[3]))
+                rows.append(dict(project_name=item[4], keyword=str(item[1]), org_name=item[3], project_type=item[0], category=item[2]))
 
     if rows:
         for counter, row in enumerate(rows):
             print('Importing %s from %s row(s)' % (counter + 1, len(rows)))
-            add_item_to_parse(challenge_code=row.get('challenge_code'), url=row.get('url'))
+            add_item_to_parse(project_name=row.get('project_name'), keyword=row.get('keyword'),
+                              org_name=row.get('org_name'), project_type=row.get('project_type'), category=row.get('category'))
 

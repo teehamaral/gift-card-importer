@@ -6,7 +6,7 @@ cryptography==2.1.1
 idna==2.6
 lml==0.0.1
 numpy==1.13.3
-parse-rest==0.2.20170114
+git+https://github.com/milesrichardson/ParsePy.git
 pycparser==2.18
 pyexcel-io==0.5.1
 pyexcel-xls==0.5.0
