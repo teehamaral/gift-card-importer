@@ -27,6 +27,6 @@ $(env) pip install -r pip-freeze.txt
 > Note: See the example.xlsx to fill your file with the correct data
 
 ```
-$(env) python init.py GiftCards /path/to/your/file.xlsx
+$(env) python init.py "GiftCards" /path/to/your/file.xlsx
 ```
 
